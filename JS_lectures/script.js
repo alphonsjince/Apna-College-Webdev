@@ -6,5 +6,3 @@ if (fullName[0] === "a" && fullName.length > 3) {
 else {
     console.log("It is a bad string")
 }
-
-lsjdfklsdfl
