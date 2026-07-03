@@ -1,4 +1,6 @@
-let msg = "help!";
-let newMsg = msg.trim().toUpperCase();
+let clg = "ApnaCollege";
 
-console.log(newMsg)
+let a = clg.slice(4, 9);
+let b = clg.indexOf("na");
+
+console.log(a, b);
