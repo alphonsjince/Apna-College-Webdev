@@ -1,17 +1,7 @@
-let months = ["January", "July", "March", "August"];
+let arr = ['c', "c++", "html", "javascript", "phython", "java", "c#", "sql"];
 
-months.shift();
+arr.reverse();   //reverses the original array and returns the array
 
-months.shift();
+console.log(arr);
 
-months.unshift("June");
-
-months.unshift("July")
-
-console.log(months);
-
-//Good Method
-
-months.splice(0, 2, "July", "June");
-
-console.log(months);
+console.log(arr.indexOf("javascript"));
