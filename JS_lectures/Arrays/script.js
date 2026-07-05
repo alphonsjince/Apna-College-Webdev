@@ -1,5 +1,17 @@
-let primary = ["red", "blue"];
+let months = ["January", "July", "March", "August"];
 
-let secondary = ["green", "orange"];
+months.shift();
 
-console.log(primary.concat(secondary));
+months.shift();
+
+months.unshift("June");
+
+months.unshift("July")
+
+console.log(months);
+
+//Good Method
+
+months.splice(0, 2, "July", "June");
+
+console.log(months);
