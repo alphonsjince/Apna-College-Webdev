@@ -1,10 +1,15 @@
-let arr = ["hello", "a", 23, 64, 99, -6];
+let favMovie = "Leo";
+let quit = "quit";
+let guess = prompt("Enter your guess");
 
-let item = prompt("Enter an Item");
+while (guess !== favMovie) {
+    guess = prompt("Your guess is incorrect. Try again");
+    if (guess === quit) {
+        console.log("You quit");
+        break;
+    }
+}
+if (guess === favMovie) {
+    console.log("You guessed the correct movie");
+}
 
-if (arr.includes(item) || arr.includes(Number(item))) {
-    console.log("Item is in the array");
-}
-else {
-    console.log("Item is not in the array");
-}
