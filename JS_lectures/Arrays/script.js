@@ -1,7 +1,10 @@
-// Qs2.Write a JavaScript program to get the first n elements of an array.
+// String is blank or not
 
-let arr = [7, 9, 0, -2];
+let str = "    ";
 
-let n = 3;
+console.log(str.length);
 
-console.log(arr.slice(-n));
+
+if (str.length===0) {
+    console.log("The string is blank");
+}
