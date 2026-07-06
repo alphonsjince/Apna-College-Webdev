@@ -1,6 +1,7 @@
-// tic tac toe array practice
+// Qs1.Write a JavaScript program to get the first n elements of an array.
 
+let arr = [7, 9, 0, -2];
 
-let game = [['X', ' ', 'O'], [' ', 'X', ' '], ['O', ' ', 'X']];
+let n = 3;
 
-console.log(game)
+console.log(arr.slice(0, n));
