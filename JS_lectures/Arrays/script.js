@@ -1,7 +1,6 @@
-let arr = ['c', "c++", "html", "javascript", "phython", "java", "c#", "sql"];
+// tic tac toe array practice
 
-arr.reverse();   //reverses the original array and returns the array
 
-console.log(arr);
+let game = [['X', ' ', 'O'], [' ', 'X', ' '], ['O', ' ', 'X']];
 
-console.log(arr.indexOf("javascript"));
+console.log(game)
