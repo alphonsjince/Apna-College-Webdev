@@ -1,10 +1,10 @@
-// String is blank or not
+let str = "ApNaCoLLEgE";
 
-let str = "    ";
+let char = str[3];
 
-console.log(str.length);
-
-
-if (str.length===0) {
-    console.log("The string is blank");
+if (char === char.toLowerCase()) {
+    console.log("The character is lower case");
+}
+else {
+    console.log("The character is upper case");
 }
