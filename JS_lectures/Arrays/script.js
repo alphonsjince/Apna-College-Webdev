@@ -1,10 +1,10 @@
-let str = "ApNaCoLLEgE";
+let arr = ["hello", "a", 23, 64, 99, -6];
 
-let char = str[3];
+let item = prompt("Enter an Item");
 
-if (char === char.toLowerCase()) {
-    console.log("The character is lower case");
+if (arr.includes(item) || arr.includes(Number(item))) {
+    console.log("Item is in the array");
 }
 else {
-    console.log("The character is upper case");
+    console.log("Item is not in the array");
 }
