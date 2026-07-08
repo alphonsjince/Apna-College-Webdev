@@ -1,9 +1,9 @@
-let arr = ["banana", "apple", "litchi", "orange", "jamun", "mango", "apple", "litchi"];
+let userNum = prompt("Enter a number");
 
-for (let i = arr.length-1; i >= 0; i--) {
-    if (arr[i] === "apple") {
-        console.log(arr.splice(i,1));
-    }
+let sum = 0;
+
+for (let num of userNum) {
+    sum = sum + Number(num);
 }
 
-console.log(arr);
+console.log(sum);
