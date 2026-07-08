@@ -1,8 +1,9 @@
-let students = [["aman", 95], ["sharadha", 93], ["karan", 99]];
+let arr = ["banana", "apple", "litchi", "orange", "jamun", "mango", "apple", "litchi"];
 
-for (let i = 0; i < students.length; i++){
-    console.log("Info of stuent #",i)
-    for (let j = 0; j < students[i].length; j++){
-        console.log(students[i][j])
+for (let i = arr.length-1; i >= 0; i--) {
+    if (arr[i] === "apple") {
+        console.log(arr.splice(i,1));
     }
 }
+
+console.log(arr);
