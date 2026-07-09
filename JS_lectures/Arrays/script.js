@@ -19,9 +19,13 @@ while (true) {
       todo.push(task);
       console.log("Task Added");
     } else if (req == "delete") {
-        let idx = prompt("Enter the index which u want to delete");
-        todo.splice(idx, 1);
-        console.log("Task deleted");
+        let idx = Number(prompt("Enter the index which u want to delete"));
+        if (idx >= 0 && idx <= todo.length - 1) {
+            todo.splice(idx, 1);
+            console.log("Task deleted");
+        } else {
+            console.log("no activity at this index")
+        }
     } else {
         console.log("You have entered wrong request");
     }
