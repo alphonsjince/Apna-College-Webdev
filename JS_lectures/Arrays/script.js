@@ -1,14 +1,22 @@
-const classInfo = {
-    aman: {
-        grade: "A+",
-        city: "Delhi"
+const carInfo = [
+    {
+        brand: "BMW",
+        price: "80 lakh"
     },
-    shradha: {
-        grade: "A",
-        city: "Pune"
+    {
+        brand: "Benz",
+        price: "70 lakh"
     },
-    karan: {
-        grade: "O",
-        city: "Mumbai"
+    {
+        brand: "Rolls Royce",
+        price: "10 crore"
     }
-} 
+]
+
+console.log(carInfo[1].brand);
+
+console.log(carInfo[2].price = "12 crore");
+
+console.log((carInfo[2].model = "phantom"));
+
+console.log(carInfo);
