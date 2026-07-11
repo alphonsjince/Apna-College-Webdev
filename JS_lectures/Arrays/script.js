@@ -8,10 +8,15 @@ let userGuess = Number(prompt("Now guess your number"));
 
 
 while (true) {
-    if (userGuess == maxNumber) {
-        console.log("You have guessed the right no.", userGuess);
+    if (userGuess < maxNumber) {
+        userGuess = Number(prompt("U guessed smaller number guess a higher no."));
+    } else if (userGuess > maxNumber) {
+        userGuess = Number(prompt("U guessed higher number guess a smaller no."));
+    } else if (userGuess === maxNumber) {
+        console.log("U have guessed the right no.");
         break;
     } else {
-        userGuess = prompt("Guess Again");
+        userGuess = Number(prompt("Guess wrong request!!"));
     }
+        
 }
