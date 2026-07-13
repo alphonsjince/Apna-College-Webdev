@@ -1,14 +1,14 @@
-let greet = "hello";
-
-function changeGreet() {
-    let greet = "namaste";
-    console.log(greet);  //namaste
-    
-    function innerGreet() {
-        console.log(greet); 
+function multipleGreet(func, n) {
+    for (let i = 1; i <= n; i++){
+        func();
     }
-    
 }
 
-console.log(greet); //hello
-changeGreet();
+let greet = function () {
+    console.log("hello");
+}
+let x = "alphons";
+
+multipleGreet(greet, 2);
+multipleGreet(x, 2);
+
