@@ -1,13 +1,17 @@
-let arr = [8, 9, 10, 1, 2, 3, 4, 5, 6, 7];
+let str = "abcdabcdefgggh";
 
-let num = 5;
+function unique(mixedString) {
 
-function largerNum(arr,num) {
-    for (let i = 0; i < arr.length; i++){
-        if (arr[i] > num) {
-            console.log(arr[i]);
+    let stored = "";
+
+    for (let i = 0; i < str.length; i++) {
+        let current = str[i];
+
+        if (!stored.includes(current)) {
+            console.log(current);
         }
+        stored += current;
     }
 }
 
-largerNum(arr,num)
+unique(str);
