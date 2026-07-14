@@ -1,28 +1,13 @@
+let arr = [8, 9, 10, 1, 2, 3, 4, 5, 6, 7];
 
+let num = 5;
 
-function oddOrEven(request) {
-    if (request === "odd") {
-        let odd = function (n) {
-            console.log(n % 2 !== 0);
+function largerNum(arr,num) {
+    for (let i = 0; i < arr.length; i++){
+        if (arr[i] > num) {
+            console.log(arr[i]);
         }
-
-        return odd;
-    } else if (request === "even") {
-        let even = function (n) {
-          console.log(n % 2 === 0);
-        }
-
-        return even;
-    } else {
-        console.log("wrong request");
     }
 }
 
-oddOrEven("odd")(7);
-
-
-
-
-
-
-
+largerNum(arr,num)
