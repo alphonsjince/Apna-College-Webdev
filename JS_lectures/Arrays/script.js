@@ -1,17 +1,25 @@
-let str = "abcdabcdefgggh";
+let country = ["Australia", "Germany", "United States of America"];
 
-function unique(mixedString) {
+function longestCountry(countryName) {
+    let storedBiggest = 0;
+    let storedName = "";
+    for (let i = 0; i < country.length; i++){
 
-    let stored = "";
+        let current = country[i].length;
 
-    for (let i = 0; i < str.length; i++) {
-        let current = str[i];
-
-        if (!stored.includes(current)) {
-            console.log(current);
+        if (current > storedBiggest) {
+            storedBiggest = current;
+            storedName = country[i];
+            
         }
-        stored += current;
+        else if (current < storedBiggest) {
+        } 
     }
+    console.log(storedBiggest);
+    console.log(storedName)
+
+    
 }
 
-unique(str);
+longestCountry(country);
+
