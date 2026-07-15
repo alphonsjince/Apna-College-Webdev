@@ -1,25 +1,19 @@
-let country = ["Australia", "Germany", "United States of America"];
+let str = "alphons";
 
-function longestCountry(countryName) {
-    let storedBiggest = 0;
-    let storedName = "";
-    for (let i = 0; i < country.length; i++){
 
-        let current = country[i].length;
+function vowels(word) {
+    let letter = "";
+    let count = 0;
+    for (let i = 0; i < word.length; i++){
+        
+        letter = word[i];
 
-        if (current > storedBiggest) {
-            storedBiggest = current;
-            storedName = country[i];
-            
+        if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u') {
+            console.log(letter);
+            count += 1;
         }
-        else if (current < storedBiggest) {
-        } 
+        
     }
-    console.log(storedBiggest);
-    console.log(storedName)
-
-    
+    return count;
 }
-
-longestCountry(country);
-
+console.log(vowels(str))
