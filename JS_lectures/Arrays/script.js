@@ -1,23 +1,15 @@
-const student = {
-    name: "Alphons",
-    marks: 95,
-    prop: this,
-    getName: function () {
-        console.log(this);
-        return this.name;
+let length = 4;
+
+function callback() {
+    console.log(this.length);
+}
+
+const object = {
+    length: 5,
+    method(callback) {
+      callback();
     },
-    getMarks: () => {
-        console.log(this);
-        return this.marks;
-    },
-    getInfo1: function () {
-        setTimeout(() => {
-            console.log(this);
-        }, 2000);
-    },
-    getInfo2: function () {
-        setTimeout(function () {
-            console.log(this);
-        }, 2000);
-    }
 };
+
+object.method(callback, 1, 2);
+
