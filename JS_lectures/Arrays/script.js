@@ -1,15 +1,15 @@
-let length = 4;
-
-function callback() {
-    console.log(this.length);
+function greet(name) {
+  return function () {
+    console.log("Hello " + name);
+  };
 }
 
-const object = {
-    length: 5,
-    method(callback) {
-      callback();
-    },
-};
+function execute(func) {
+  console.log("Start");
+  func();
+  console.log("End");
+}
 
-object.method(callback, 1, 2);
+let sayHi = greet("Alice");
 
+execute(sayHi);
