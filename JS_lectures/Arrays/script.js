@@ -1,15 +1,16 @@
-function greet(name) {
-  return function () {
-    console.log("Hello " + name);
+const greet = (name) => {
+  console.log("Hello " + name);
+  return () => {
+    console.log("Bye " + name);
   };
-}
+};
 
-function execute(func) {
+const run = (func) => {
   console.log("Start");
   func();
   console.log("End");
-}
+};
 
-let sayHi = greet("Alice");
+const x = greet("Bob");
 
-execute(sayHi);
+run(x);
