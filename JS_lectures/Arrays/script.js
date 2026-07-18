@@ -1,10 +1,18 @@
-function multiply(x) {
-  return function (y) {
-    return x * y;
+function outer(a) {
+  console.log("Outer:", a);
+
+  return function (b) {
+    console.log("Middle:", b);
+
+    return function (c) {
+      console.log("Inner:", c);
+      console.log(a + b + c);
+    };
   };
 }
 
-const double = multiply(2);
+const x = outer(2);
 
-console.log(double(5));
-console.log(multiply(3)(4));
+const y = x(3);
+
+y(4);
