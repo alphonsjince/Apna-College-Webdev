@@ -1,18 +1,15 @@
-function outer(a) {
-  console.log("Outer:", a);
+const person = {
+  name: "Charlie",
 
-  return function (b) {
-    console.log("Middle:", b);
+  greet(prefix) {
+    console.log("Inside greet");
 
-    return function (c) {
-      console.log("Inner:", c);
-      console.log(a + b + c);
+    return () => {
+      console.log(prefix + " " + this.name);
     };
-  };
-}
+  },
+};
 
-const x = outer(2);
+const sayHello = person.greet("Hello");
 
-const y = x(3);
-
-y(4);
+sayHello();
