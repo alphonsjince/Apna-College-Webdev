@@ -1,15 +1,11 @@
-const person = {
-  name: "Charlie",
+let nums = [2, 3, 2, 5, 8, 2, 4, 8, 9,];
 
-  greet(prefix) {
-    console.log("Inside greet");
+let ans = nums.reduce((max, el) => {
+  if (max < el) {
+    return el
+  } else {
+    return max
+  }
+});
 
-    return () => {
-      console.log(prefix + " " + this.name);
-    };
-  },
-};
-
-const sayHello = person.greet("Hello");
-
-sayHello();
+console.log(ans)
