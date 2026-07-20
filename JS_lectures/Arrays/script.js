@@ -1,11 +1,8 @@
-let nums = [2, 3, 2, 5, 8, 2, 4, 8, 9,];
+let arr = [1, 2, 3, 4, 5];
+let newArr = [...arr];
 
-let ans = nums.reduce((max, el) => {
-  if (max < el) {
-    return el
-  } else {
-    return max
-  }
-});
+console.log(newArr);
 
-console.log(ans)
+let char = [..."Hello"];
+
+console.log(char);
