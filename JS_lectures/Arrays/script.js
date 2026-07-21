@@ -1,8 +1,5 @@
-let arr = [1, 2, 3, 4, 5];
-let newArr = [...arr];
+let names = ["tony", "bruce", "peter", "steve", "hulk", "thor"];
 
-console.log(newArr);
+let [winner, runup] = names;
 
-let char = [..."Hello"];
-
-console.log(char);
+console.log(winner);
