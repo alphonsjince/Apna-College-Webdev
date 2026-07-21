@@ -1,10 +1,12 @@
-const student = {
-  name: "karan",
-  age: 13,
-  class: 8,
-  subjects: ["English", "hindi", "maths"],
-  username: "karan@123",
-  password: "abcd"
-};
+let nums = [1, 2, 3, 4, 5];
 
-let { username: user, password: hidden, city: place = "kerala" } = student;
+const square = nums.map((num) => num * num);
+
+console.log(square); 
+
+let sum = square.reduce((acc, cur) => acc + cur, 0);
+
+let avg = sum / nums.length;
+
+console.log(avg);
+
