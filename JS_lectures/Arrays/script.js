@@ -1,7 +1,16 @@
-let strings = ["adam", "bob", "emi", "donald", "eve"];
+let obj1 = {
+  name: "thomas",
+  age: 32,
+  city: "chennai",
+};
 
-let upperString = strings.map((names) => {
-  return names.toUpperCase()
-});
+let obj2 = {
+  name: "rony",
+  age: 38,
+  city: "mumbai",
+};
 
-console.log(upperString);
+const mergeObject = (obj1, obj2) => [obj1, obj2];
+
+console.log(mergeObject(obj1, obj2));
+
