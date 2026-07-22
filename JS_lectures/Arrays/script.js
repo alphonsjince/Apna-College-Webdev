@@ -1,12 +1,7 @@
-let nums = [1, 2, 3, 4, 5];
+let arr = [2,4,6,8,-2,-4];
 
-const square = nums.map((num) => num * num);
+let result = arr.map((el) => {
+  return el + 5
+});
 
-console.log(square); 
-
-let sum = square.reduce((acc, cur) => acc + cur, 0);
-
-let avg = sum / nums.length;
-
-console.log(avg);
-
+console.log(result);
