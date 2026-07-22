@@ -10,7 +10,10 @@ let obj2 = {
   city: "mumbai",
 };
 
-const mergeObject = (obj1, obj2) => [obj1, obj2];
+const mergeObjects = (obj1, obj2) => ({
+  ...obj1,
+  ...obj2,
+});
 
-console.log(mergeObject(obj1, obj2));
+console.log(mergeObjects(obj1, obj2));
 
