@@ -1,7 +1,7 @@
-let arr = [2,4,6,8,-2,-4];
+let strings = ["adam", "bob", "emi", "donald", "eve"];
 
-let result = arr.map((el) => {
-  return el + 5
+let upperString = strings.map((names) => {
+  return names.toUpperCase()
 });
 
-console.log(result);
+console.log(upperString);
