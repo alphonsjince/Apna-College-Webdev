@@ -1,9 +1,9 @@
-body {
+/* body {
   font-family: Arial;
 }
 
 #mainImg {
-  width: 85%;
+  width: 35%;
 }
 
 .box {
@@ -25,4 +25,13 @@ body {
 
 #description {
   background-color: antiquewhite;
+} */
+
+
+.red{
+  color: red;
+}
+
+.h3{
+  color: blue;
 }
