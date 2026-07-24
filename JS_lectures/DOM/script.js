@@ -1,32 +1,18 @@
-let para1 = document.createElement('p');
+let h3 = document.querySelector('h3');
+let btn = document.querySelector('button');
+let box = document.querySelector('.box');
 
-para1.innerText = "Hello im para 1";
+function getRandomColor() {
+    let red = Math.floor(Math.random() * 255);
+    let green = Math.floor(Math.random() * 255);
+    let blue = Math.floor(Math.random() * 255);
 
-document.querySelector("body").append(para1);
+    let color = `rgb(${red},${green},${blue})`;
 
-para1.classList.add('red');
+    return color;
+};
 
-
-
-let h3 = document.createElement('h3');
-
-h3.innerText = "im blue h3";
-
-document.querySelector("body").append(h3);
-
-h3.classList.add("h3");
-
-
-
-let div = document.createElement("div");
-let h1 = document.createElement("h1");
-let p = document.createElement("p");
-
-h1.innerText = "hey im h1";
-p.innerText = "hey im p2";
-
-div.append(h1);
-div.append(p);
-div.classList.add("box");
-
-document.querySelector("body").append(div);
+btn.addEventListener("click", function () {
+    h3.innerText = getRandomColor();
+    box.style.backgroundColor = getRandomColor();
+});
