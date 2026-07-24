@@ -1,18 +1,14 @@
-let h3 = document.querySelector('h3');
-let btn = document.querySelector('button');
-let box = document.querySelector('.box');
+let h1 = document.querySelector('h1');
+let p = document.querySelector("p");
+let h3 = document.querySelector("h3");
+let btn = document.querySelector("button");
 
-function getRandomColor() {
-    let red = Math.floor(Math.random() * 255);
-    let green = Math.floor(Math.random() * 255);
-    let blue = Math.floor(Math.random() * 255);
+function changeColor() {
+    console.log(this.innerText);
+    this.style.backgroundColor = "blue";
+}
 
-    let color = `rgb(${red},${green},${blue})`;
-
-    return color;
-};
-
-btn.addEventListener("click", function () {
-    h3.innerText = getRandomColor();
-    box.style.backgroundColor = getRandomColor();
-});
+btn.addEventListener('click', changeColor);
+p.addEventListener("click", changeColor);
+h1.addEventListener("click", changeColor);
+h3.addEventListener("click", changeColor);
