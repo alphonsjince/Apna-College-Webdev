@@ -1,14 +1,7 @@
-let h1 = document.querySelector('h1');
-let p = document.querySelector("p");
-let h3 = document.querySelector("h3");
-let btn = document.querySelector("button");
+let inp = document.querySelector("#type");
+let p = document.querySelector('p');
 
-function changeColor() {
-    console.log(this.innerText);
-    this.style.backgroundColor = "blue";
-}
-
-btn.addEventListener('click', changeColor);
-p.addEventListener("click", changeColor);
-h1.addEventListener("click", changeColor);
-h3.addEventListener("click", changeColor);
+inp.addEventListener("input", function () {
+    p.innerText = inp.value;
+    console.log(inp.value);
+})
