@@ -1,21 +1,25 @@
-let inp = document.querySelector("#text");
-let h1 = document.querySelector("h1");
+let inp = document.querySelector('input');
+let btn = document.querySelector('button');
+let ul = document.querySelector('ul');
 
-// const lower = "abcdefghijklmnopqrstuvwxyz";
-// const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-// inp.addEventListener("input", function () {
-//   let result = "";
+btn.addEventListener('click', function () {
+    let item = document.createElement('li');
+    item.innerText = inp.value;
+    
+    let delBtn = document.createElement('button');
+    delBtn.innerText = "delete";
+    delBtn.classList.add("delete");
+    item.appendChild(delBtn);
 
-//   for (let ch of inp.value) {
-//     if (lower.includes(ch) || upper.includes(ch) || ch === " ") {
-//       result += ch;
-//     }
-//   }
-
-//   h1.innerText = result;
-// });
-
-inp.addEventListener("input", function () {
-  h1.innerText = inp.value.replace(/[^a-zA-Z ]/g, "");
+    ul.appendChild(item);
+    inp.value = "";
 });
+
+let delBtns = document.querySelectorAll(".delete");
+for (delBtn of delBtns) {
+    delBtn.addEventListener('click', function () {
+        let parent = this.parentElement;
+        parent.remove();
+    })
+}
