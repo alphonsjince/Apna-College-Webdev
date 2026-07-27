@@ -16,10 +16,19 @@ btn.addEventListener('click', function () {
     inp.value = "";
 });
 
-let delBtns = document.querySelectorAll(".delete");
-for (delBtn of delBtns) {
-    delBtn.addEventListener('click', function () {
-        let parent = this.parentElement;
-        parent.remove();
-    })
-}
+
+ul.addEventListener("click", function (event) {
+    if (event.target.nodeName == "BUTTON") {
+        let listItem = event.target.parentElement;
+        listItem.remove();
+        console.log("deleted");
+    }
+});
+
+// let delBtns = document.querySelectorAll(".delete");
+// for (delBtn of delBtns) {
+//     delBtn.addEventListener('click', function () {
+//         let parent = this.parentElement;
+//         parent.remove();
+//     })
+// }
