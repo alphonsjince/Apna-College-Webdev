@@ -1,3 +1,5 @@
+const { useContext } = require("react");
+
 let gameSeq = [];
 let userSeq = [];
 
@@ -22,6 +24,13 @@ function btnFlash(btn){
     }, 200);
 }
 
+function userFlash(btn) {
+  btn.classList.add("userFlash");
+  setTimeout(function () {
+    btn.classList.remove("userFlash");
+  }, 200);
+}
+
 function levelUp() {
     level++;
     h2.innerText = `level ${level}`;
@@ -29,9 +38,28 @@ function levelUp() {
     let randColor = btns[randIdx];
     let randBtn = document.querySelector(`.${randColor}`);
 
-    console.log(randIdx);
-    console.log(randColor);
-    console.log(randBtn);
+    gameSeq.push(randColor);
+    console.log(gameSeq);
 
     btnFlash(randBtn);
+} 
+
+function checkButton() {
+    
+}
+
+function btnPress() {
+    console.log(this)
+    let btn = this;
+    userFlash(btn);
+
+    let userColor = btn.getAttribute("id");
+    userSeq.push(userColor);
+
+    checkButton();
+}
+
+let allBtns = document.querySelectorAll(".btn");
+for (btn of allBtns) {
+    btn.addEventListener("click", btnPress);
 }
