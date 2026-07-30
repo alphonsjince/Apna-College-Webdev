@@ -40,7 +40,6 @@ function levelUp() {
 
     gameSeq.push(randColor);
     console.log(gameSeq);
-    console.log(userSeq);
 
     btnFlash(randBtn);
 } 
@@ -51,7 +50,11 @@ function checkButton(idx) {
             setTimeout(levelUp, 1000);
         }
     } else {
-        h2.innerText = "Game Over!! Press any key to start again";
+        h2.innerHTML = `Game Over!! Your scrore was <b>${level-1}</b> <br>  Press any key to start again`;
+        document.querySelector("body").style.backgroundColor = "red";
+        setTimeout(function () {
+            document.querySelector("body").style.backgroundColor = "white";
+        }, 150);
         reset();
     }
 }
