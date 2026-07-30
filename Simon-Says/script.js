@@ -1,4 +1,3 @@
-const { useContext } = require("react");
 
 let gameSeq = [];
 let userSeq = [];
@@ -40,12 +39,19 @@ function levelUp() {
 
     gameSeq.push(randColor);
     console.log(gameSeq);
+    console.log(userSeq);
 
     btnFlash(randBtn);
 } 
 
-function checkButton() {
-    
+function checkButton(idx) {
+    if (userSeq[idx] === gameSeq[idx]) {
+        if (userSeq.length == gameSeq.length) {
+            setTimeout(levelUp, 1000);
+        }
+    } else {
+        h2.innerText = "Game Over!! Press any key to start again";
+    }
 }
 
 function btnPress() {
@@ -56,7 +62,7 @@ function btnPress() {
     let userColor = btn.getAttribute("id");
     userSeq.push(userColor);
 
-    checkButton();
+    checkButton(userSeq.length-1);
 }
 
 let allBtns = document.querySelectorAll(".btn");
