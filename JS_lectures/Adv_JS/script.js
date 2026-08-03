@@ -1,30 +1,34 @@
-h1 = document.querySelector("h1");
+function saveToDb(data, success, failure) {
+    let internetSpeed = Math.floor(Math.random() * 10) + 1;
+    if (internetSpeed > 4) {
+        success();
+    } else {
+        failure();
+    }
+};
 
-// setTimeout(() => {
-//     h1.style.color = "red";
-// }, 1000);
-
-// setTimeout(() => {
-//     h1.style.color = "red";
-// }, 2000);
-
-// setTimeout(() => {
-//     h1.style.color = "red";
-// }, 3000);
-
-function changeColor(color, delay, nextColor) {
-    setTimeout(() => {
-        h1.style.color = color;
-        if(nextColor) nextColor();
-    }, delay);
-}
-
-changeColor("red", 1000, () => {
-    changeColor("orange", 1000, () => {
-        changeColor("blue", 1000, () => {
-            changeColor("green", 1000, () => {
-                changeColor("grey", 1000);
-            });
-        });
-    });
-});
+saveToDb(
+    "hello",
+    () => {
+        console.log("success1: data saved");
+        saveToDb(
+            "world", () => {
+                console.log("success2: data saved");
+                saveToDb("alphons",
+                    () => {
+                        console.log("sucess 3: saved");
+                    },
+                    () => {
+                        console.log("failure 3 not saved");
+                    }
+                );
+            },
+            () => {
+                console.log("data 2 not saved");
+            }
+        );
+    },
+    () => {
+    console.log("data not saved");
+    }
+);
