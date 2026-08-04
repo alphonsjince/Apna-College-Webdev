@@ -33,16 +33,21 @@
 //     }
 // );
 
-
-
 function saveToDb(data) {
-    return new Promise((resolve, reject) => {
-        let internetSpeed = Math.floor(Math.random() * 10) + 1;
-        if (internetSpeed > 4) {
-            resolve("success: data was saved");
-        } else {
-            reject("failed to save data");
-        }
-    });
+  return new Promise((resolve, reject) => {
+    let internetSpeed = Math.floor(Math.random() * 10) + 1;
+    if (internetSpeed > 4) {
+      resolve("success: data was saved");
+    } else {
+      reject("failed to save data");
+    }
+  });
 }
 
+let request = saveToDb("hello world")
+  .then(() => {
+    console.log("promise was resolved");
+  })
+  .catch(() => {
+    console.log("promise was rejected");
+  });
