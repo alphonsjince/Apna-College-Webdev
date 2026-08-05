@@ -33,29 +33,77 @@
 //     }
 // );
 
-function saveToDb(data) {
+// function saveToDb(data) {
+//   return new Promise((resolve, reject) => {
+//     let internetSpeed = Math.floor(Math.random() * 10) + 1;
+//     if (internetSpeed > 4) {
+//       resolve("success: data was saved");
+//     } else {
+//       reject("failed to save data");
+//     }
+//   });
+// }
+
+// saveToDb("hello world")
+//   .then((result) => {
+//     console.log("data 1 saved");
+//     console.log("result of promise: ", result);
+//     return saveToDb("alphons");
+//   })
+//   .then((result) => {
+//     console.log("data 2 saved");
+//     console.log("result of promise: ", result);
+//     return saveToDb("jince");
+//   })
+//   .then((result) => {
+//     console.log("data 3 saved");
+//     console.log("result of promise: ", result);
+//   })
+//   .catch((error) => {
+//     console.log("promise was rejected");
+//     console.log("result of error: ", error);
+//   });
+
+
+
+
+h1 = document.querySelector("h1");
+
+function changeColor(color, delay, ) {
   return new Promise((resolve, reject) => {
-    let internetSpeed = Math.floor(Math.random() * 10) + 1;
-    if (internetSpeed > 4) {
-      resolve("success: data was saved");
-    } else {
-      reject("failed to save data");
-    }
+    setTimeout(() => {
+      h1.style.color = color;
+      resolve("color changed");
+    }, delay);
   });
 }
 
-saveToDb("hello world")
+changeColor("red", 1000)
   .then(() => {
-    console.log("data 1 saved");
-    return saveToDb("alphons");
+    console.log("red color was completed");
+    return changeColor("orange", 1000);
   })
   .then(() => {
-    console.log("data 2 saved");
-    return saveToDb("jince");
+    console.log("orange color was completed");
+    return changeColor("green", 1000);
   })
   .then(() => {
-    console.log("data 3 saved");
+    console.log("green color was completed");
+    return changeColor("blue", 1000);
   })
-  .catch(() => {
-    console.log("promise was rejected");
-  });
+  .then(() => {
+    console.log("blue color was completed");
+  })
+
+
+
+
+// changeColor("red", 1000, () => {
+//   changeColor("orange", 1000, () => {
+//     changeColor("green", 1000, () => {
+//       changeColor("yellow", 1000, () => {
+//         changeColor("blue", 1000);
+//       });
+//     });
+//   });
+// });
