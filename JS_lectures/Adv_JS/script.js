@@ -1,12 +1,13 @@
-let jsonRes =
-  '{"fact":"The average cat food meal is the equivalent to about five mice.","length":63}';
+let url = "https://catfact.ninja/fact";
 
-let validRes = JSON.parse(jsonRes);
-console.log(validRes.fact)
-
-let student = {
-  name: "alphons",
-  marks: 68
-};
-
-console.log(JSON.stringify(student));
+fetch(url)
+  .then((res) => {
+    console.log(res);
+    return res.json();
+  })
+  .then((data) => {
+    console.log(data.fact);
+  })
+  .catch((err) => {
+    console.log(err);
+})
