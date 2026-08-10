@@ -1,23 +1,13 @@
-let url = "https://catfact.ninja/fact";
+const url = "https://icanhazdadjoke.com/";
 
-let btn = document.querySelector("button");
-
-btn.addEventListener("click", async () => {
-  let factBroweser = await getFacts();
-  let p = document.querySelector('p');
-  p.innerText = factBroweser;
-})
-
-async function getFacts() {
+async function getJokes() {
   try {
-    let res = await axios.get(url);
-
-    return res.data.fact;
-  } catch(err) {
+    const config = { headers: { Accept: "application/json" } };
+    let res = await axios.get(url,config);
+    console.log(res.data);
+  } catch (err) {
     console.log(err);
-    return "no fact found";
   }
 }
 
-getFacts();
-
+getJokes();
