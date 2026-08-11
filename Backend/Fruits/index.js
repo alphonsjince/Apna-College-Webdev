@@ -4,4 +4,4 @@ let orange = require("./orange");
 
 let fruits = [apple, banana, orange];
 
-module.exports = fruits;
+module.exports = fruits; 
