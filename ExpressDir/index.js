@@ -8,19 +8,12 @@ app.listen(port, () => {
   console.log(`app is listening on port ${port}`);
 });
 
+
 app.get("/", (req, res) => {
   res.send("hello im root");
 });
 
-app.get("/search", (req, res) => {
-  res.send("You contacted serarch route");
+app.get("/:username/:id", (req, res) => {
+  let { username, id } = req.params;
+  res.send(`welcome @${username} your id is ${id}`);
 });
-
-app.get("/help", (req, res) => {
-  res.send("You contacted help route");
-});
-
-// app.use((req, res) => {
-//   console.log("request recieved");
-//   res.send("This is a basic response");
-// })
