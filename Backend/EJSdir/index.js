@@ -9,6 +9,14 @@ app.set("views", path.join(__dirname, "/views"));
 
 app.get("/", (req, res) => {
     res.render("home.ejs");
+});
+
+app.get("/ig/:username", (req, res) => {
+    let { username } = req.params;
+    const instaData = require("./data.json");
+    const data = instaData[username];
+    console.log(data)
+    res.render("insta.ejs", { data });
 })
 
 app.get("/rolldice", (req, res) => {
