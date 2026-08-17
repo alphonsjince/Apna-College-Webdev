@@ -1,23 +1,25 @@
-// function personMaker(name,age) {
-//   const person = {
-//     name: name,
-//     age: age,
-//     talk() {
-//       console.log(`Hi, Im ${this.name}`);
-//     }
-//   }
+class Person{
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
 
-//   return person;
-// }
-
-function Person(name, age) {
-  this.name = name;
-  this.age = name;
+  talk() {
+    console.log(`HI, I am ${this.name}`);
+  }
 }
 
-Person.prototype.talk = function () {
-  console.log(`hi ${this.name}`);
+class Student extends Person{
+  constructor(name, age, marks) {
+    super(name, age);
+    this.marks = marks;
+  }
 }
 
-let p1 = new Person('adam', 25);
-p1.talk();
+
+class Student extends Person{
+  constructor(name, age, subject) {
+    super(name, age);
+    this.subject = subject;
+  }
+}
