@@ -3,7 +3,7 @@ const { faker } = require('@faker-js/faker');
 const connection = await mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  database: 'Alphons_new',
+  database: 'delta_app',
   password: 'stalphy@123'
 });
 
