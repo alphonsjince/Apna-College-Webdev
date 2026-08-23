@@ -10,7 +10,8 @@ const connection = await mysql.createConnection({
 try {
   connection.query("SHOW TABLES", (err, result) => {
     if (err) throw err;
-    console.log(result);
+    console.log(result); 
+    
   })
 } catch (err) {
   console.log(err);
